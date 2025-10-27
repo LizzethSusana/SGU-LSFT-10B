@@ -18,7 +18,7 @@ services:
   backend:
     build:
       context: ./server
-    image: server:latest
+    image: server:1.0-sgu
     container_name: sgu-backend
     environment:
       - SERVER_PORT=8080
@@ -42,7 +42,7 @@ services:
         API_HOST: localhost
         API_PORT: 8081
         API_BASE: /sgu-api
-    image: client:latest
+    image: client:1.0-sgu
     container_name: sgu-frontend
     ports:
       - "3000:80"
