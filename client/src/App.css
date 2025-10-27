@@ -1,0 +1,123 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+:root{
+  --accent: #ff69b4; /* rosa */
+  --accent-50: #fff0f5;
+  --muted: #fff5f8;
+}
+
+/* tarjetas con acento sutil */
+.card-custom{
+  border: 1px solid rgba(255,105,180,0.12);
+  background: linear-gradient(180deg, rgba(255,105,180,0.03), transparent 40%);
+}
+
+.form-label{font-weight:600}
+
+/* botones icono pequeños */
+.btn-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:34px;
+  height:34px;
+  padding:0;
+  border-radius:6px;
+}
+.btn-icon svg{width:16px;height:16px}
+
+/* enfoque sutil en inputs */
+input.form-control:focus{box-shadow:0 0 0 0.15rem rgba(108,99,255,0.12);border-color:var(--accent)}
+
+/* encabezado de tabla ligero */
+.table thead th{background:var(--accent-50);border-bottom:0}
+
+/* mensaje pequeño */
+.small-muted{color:#6c6f76;font-size:0.9em}
+
+/* Más colorcito: botones y encabezados */
+.card-title{color:var(--accent);font-weight:700}
+
+.btn-primary{
+  background: linear-gradient(90deg,var(--accent), #5a52e6);
+  border: none;
+}
+.btn-primary:hover{filter:brightness(0.95)}
+
+.btn-secondary{
+  background: linear-gradient(90deg,#f3f4ff,#fafbff);
+  color:#333;border:1px solid rgba(0,0,0,0.06)
+}
+
+/* inputs con pequeño borde izquierdo de color */
+.mb-3 .form-control{border-left:4px solid transparent;padding-left:0.75rem}
+.mb-3 .form-control:focus{border-left-color:var(--accent)}
+
+/* filas de tabla con tonalidades suaves según par */
+.table-striped tbody tr:nth-of-type(odd){background:rgba(108,99,255,0.03)}
+.table-hover tbody tr:hover{background:rgba(108,99,255,0.06)}
+
+/* iconos: usar color actual del botón (currentColor) */
+.btn-icon{color:inherit}
+.btn-outline-primary.btn-icon{color:var(--accent)}
+.btn-outline-danger.btn-icon{color:#e25555}
+
+/* hacer los iconos más visibles en dispositivos móviles */
+@media (max-width:576px){
+  .btn-icon{width:40px;height:40px}
+  .btn-icon svg{width:18px;height:18px}
+}
+
+/* pequeño badge de estado para el email (opcional) */
+.email-badge{background:linear-gradient(90deg,#eef0ff,#f7f7ff);color:#333;padding:0.15rem 0.45rem;border-radius:6px;font-size:0.85em}
+
+/* botones más largos y responsivos */
+.btn-primary.btn-lg{min-width:160px}
+.btn-secondary.btn-lg{min-width:140px}
+.form-actions .btn{min-width:140px}
+
+@media (max-width:576px){
+  .form-actions .btn{width:100%;min-width:0}
+  .form-actions .btn + .btn{margin-top:0.5rem}
+}
